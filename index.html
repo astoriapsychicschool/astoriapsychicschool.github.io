@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="In-person classes in psychic reading and intuition, taught monthly in Astoria, Oregon by Jim Flood. Free, with donations welcome.">
+<title>Astoria Psychic School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}</style>
+<style>
+/* Layout: a single narrow column like a printed evening program — river-fog ground, one lamplit accent for times and the date. */
+:root {
+  --bg: #eef1f0;          /* river fog */
+  --surface: #ffffff;
+  --ink: #1d2b2e;         /* Columbia slate */
+  --muted: #56676a;
+  --line: #cdd6d5;
+  --accent: #a8641c;      /* lamplight amber */
+  --accent-soft: #f4e6d4;
+  --display: "Gloock", Georgia, "Times New Roman", serif;
+  --body: "Karla", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121a1c; --surface: #1a2427; --ink: #e4ebea; --muted: #9aabad;
+    --line: #2c3a3d; --accent: #e3a35a; --accent-soft: #2e2519; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121a1c; --surface: #1a2427; --ink: #e4ebea; --muted: #9aabad;
+  --line: #2c3a3d; --accent: #e3a35a; --accent-soft: #2e2519; color-scheme: dark;
+}
+
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+.wrap {
+  max-width: 680px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 56px 48px;
+  display: grid; gap: 56px;
+}
+h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.05; letter-spacing: -0.01em; }
+h2 { font-size: 1.6rem; line-height: 1.2; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.label { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+
+header { display: grid; gap: 16px; }
+header .where { color: var(--muted); font-size: 1.05rem; }
+header .lede { max-width: 34em; }
+
+section { display: grid; gap: 20px; }
+
+/* The evening program: the one set-apart object on the page */
+.program { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 28px; display: grid; gap: 24px; }
+.program .date { font-family: var(--display); font-size: 1.9rem; line-height: 1.1; color: var(--accent); }
+.program .date small { display: block; font-family: var(--body); font-size: 0.95rem; color: var(--muted); margin-top: 6px; }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; }
+.timeline li { display: grid; grid-template-columns: 6.5em 1fr; gap: 16px; padding-block: 14px; border-top: 1px solid var(--line); }
+.timeline li:last-child { border-bottom: 1px solid var(--line); }
+.timeline time { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--accent); }
+.timeline .what { min-width: 0; }
+.timeline .what strong { display: block; font-size: 1.05rem; }
+.timeline .what span { color: var(--muted); font-size: 0.95rem; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+.facts div { display: grid; gap: 4px; min-width: 0; }
+.tba { display: inline-block; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 0.85rem; padding: 2px 8px; border-radius: 3px; width: fit-content; }
+.note { font-size: 0.92rem; color: var(--muted); }
+.also { display: grid; gap: 4px; color: var(--muted); font-size: 0.95rem; }
+
+.contact { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.email { font-size: 1.15rem; font-weight: 500; user-select: all; overflow-wrap: anywhere; min-width: 0; }
+button.copy { font: inherit; font-size: 0.9rem; font-weight: 700; color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 4px; padding: 4px 12px; cursor: pointer; }
+button.copy:hover { background: var(--accent-soft); }
+
+.notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.notes li { display: grid; grid-template-columns: 6.5em 1fr; gap: 16px; padding-block: 14px; border-top: 1px solid var(--line); }
+.notes li:last-child { border-bottom: 1px solid var(--line); }
+.notes .d { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 700; }
+
+footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 20px; }
+
+@media (max-width: 440px) {
+  .program { padding: 20px; }
+  .timeline li, .notes li { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="label">Astoria, Oregon</span>
+    <h1>Astoria Psychic School</h1>
+    <p class="lede">In-person classes in psychic reading and intuition, taught monthly in Astoria, Oregon by Jim Flood. Beginners are welcome; no experience needed.</p>
+  </header>
+
+  <section aria-labelledby="next">
+    <span class="label" id="next">Next class</span>
+    <div class="program">
+      <div class="date">Friday, November 6
+        <small>Beginning Psychic Reading · first session</small>
+      </div>
+      <ol class="timeline">
+        <li>
+          <time>6:00–7:00</time>
+          <div class="what"><strong>Beginning Psychic Reading</strong><span>With Jim Flood. Free, with donations welcome. Class notes are posted here afterward.</span></div>
+        </li>
+      </ol>
+      <div class="also">
+        <span class="label">Also that evening</span>
+        <span>Arrive early to attend Priestess Dani Rose’s Magdalene Meditation, held in the same space at 5:30 pm.</span>
+      </div>
+      <div class="facts">
+        <div>
+          <span class="label">Where</span>
+          <span>Necessary Magic<br>333 10th Street<br>Astoria, OR 97103</span>
+          <a href="https://www.necessarymagic.com/workshops-and-classes" target="_blank" rel="noopener">Necessary Magic events</a>
+        </div>
+      </div>
+      <p class="note">The class meets upstairs in a historic building without a lift. For accessibility questions, please contact Necessary Magic.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="notes-h">
+    <h2 id="notes-h">Class notes</h2>
+    <p>Outlines and notes from each class, for review between sessions.</p>
+    <ul class="notes">
+      <li><span class="d">Nov 6</span><span>Beginning Psychic Reading, session 1 — notes posted after class.</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="contact-h">
+    <h2 id="contact-h">Questions between classes</h2>
+    <div class="contact">
+      <span class="email" id="email">jim@astoriapsychicschool.com</span>
+      <button class="copy" id="copy" type="button">Copy</button>
+    </div>
+    <p>Short videos on psychic reading and meditation are on YouTube at <a href="https://www.youtube.com/@astoriapsychicschool" target="_blank" rel="noopener">@astoriapsychicschool</a>.</p>
+  </section>
+
+  <footer>Astoria Psychic School · Jim Flood · Astoria, Oregon · astoriapsychicschool.com</footer>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var email = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var text = email.textContent.trim();
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Copied'; }, selectIt);
+    } catch (e) { selectIt(); }
+    setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+  });
+})();
+</script>
+</body>
+</html>
