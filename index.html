@@ -78,15 +78,28 @@ button.copy { font: inherit; font-size: 0.9rem; font-weight: 700; color: var(--a
 button.copy:hover { background: var(--accent-soft); }
 
 .notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
-.notes li { display: grid; grid-template-columns: 6.5em 1fr; gap: 16px; padding-block: 14px; border-top: 1px solid var(--line); }
-.notes li:last-child { border-bottom: 1px solid var(--line); }
+.notes > li { display: grid; grid-template-columns: 6.5em 1fr; gap: 16px; padding-block: 14px; border-top: 1px solid var(--line); }
+.notes > li:last-child { border-bottom: 1px solid var(--line); }
 .notes .d { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 700; }
 
 footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 20px; }
 
+.notes .entry { display: grid; gap: 10px; min-width: 0; }
+.notes .links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.95rem; }
+details.classnotes { border-left: 3px solid var(--accent-soft); padding-left: 16px; }
+details.classnotes summary { cursor: pointer; color: var(--accent); font-weight: 700; font-size: 0.95rem; width: fit-content; }
+details.classnotes[open] summary { margin-bottom: 12px; }
+.classnotes h3 { font-family: var(--display); font-weight: 400; font-size: 1.25rem; margin: 20px 0 6px; }
+.classnotes h3:first-of-type { margin-top: 4px; }
+.classnotes p { margin: 0 0 8px; }
+.classnotes ul { margin: 0 0 8px; padding-left: 1.2em; display: grid; gap: 6px; }
+.classnotes .practice { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 0 4px 4px 0; margin-top: 18px; }
+.classnotes .practice strong { display: block; margin-bottom: 4px; }
+.classnotes .ai { font-size: 0.85rem; font-style: italic; color: var(--muted); margin-top: 14px; }
+
 @media (max-width: 440px) {
   .program { padding: 20px; }
-  .timeline li, .notes li { grid-template-columns: 1fr; gap: 2px; }
+  .timeline li, .notes > li { grid-template-columns: 1fr; gap: 2px; }
 }
 </style>
 </head>
@@ -102,18 +115,18 @@ footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--lin
   <section aria-labelledby="next">
     <span class="label" id="next">Next class</span>
     <div class="program">
-      <div class="date">Friday, November 6
-        <small>Beginning Psychic Reading · first session</small>
+      <div class="date">Friday, December 4
+        <small>Beginning Psychic Reading · also Friday, December 18, same time</small>
       </div>
       <ol class="timeline">
         <li>
-          <time>6:00–7:00</time>
+          <time>6:30–7:30</time>
           <div class="what"><strong>Beginning Psychic Reading</strong><span>With Jim Flood. Free, with donations welcome. Class notes are posted here afterward.</span></div>
         </li>
       </ol>
       <div class="also">
         <span class="label">Also that evening</span>
-        <span>Arrive early to attend Priestess Dani Rose’s Magdalene Meditation, held in the same space at 5:30 pm.</span>
+        <span>Arrive early to attend Priestess Dani Rose’s Magdalene Meditation, held in the same space from 5:45 to 6:15 pm.</span>
       </div>
       <div class="facts">
         <div>
@@ -139,7 +152,39 @@ footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--lin
     <h2 id="notes-h">Class notes</h2>
     <p>Outlines and notes from each class, for review between sessions.</p>
     <ul class="notes">
-      <li><span class="d">Nov 6</span><span>Beginning Psychic Reading, session 1 — notes posted after class.</span></li>
+      <li><span class="d">Nov 6</span><div class="entry">
+        <span>Beginning Psychic Reading, session 1: grounding, running energy, and mental image pictures.</span>
+        <details class="classnotes">
+          <summary>Read the notes</summary>
+          <h3>1. Grounding</h3>
+          <p>Grounding connects you to the earth and to your body, so you feel present and stable.</p>
+          <ul>
+            <li>Sit comfortably with your feet on the floor.</li>
+            <li>Create a grounding cord from the base of your spine down to the center of the earth. It can be a cord of light, a tree root, a waterfall, or anything that works for you.</li>
+            <li>Let anything that isn’t yours, or that you’re done with, release down the cord.</li>
+            <li>If visualizing doesn’t come easily, just feel your feet on the floor and your weight in the chair.</li>
+          </ul>
+          <h3>2. Running energy</h3>
+          <p>Running energy clears and refreshes your space, and helps you be fully present in your body.</p>
+          <ul>
+            <li>Earth energy comes up through your feet, through your legs, and into your grounding at the base of your spine.</li>
+            <li>Cosmic energy comes in through the top of your head, runs down the back of your spine, and mixes with the earth energy.</li>
+            <li>Let the blended energy flow up and out the top of your head, like a fountain, and back down around you.</li>
+            <li>You don’t need to force anything. Just notice the flow.</li>
+          </ul>
+          <h3>3. Mental image pictures</h3>
+          <p>We all carry mental image pictures: stored impressions of experiences, beliefs, and expectations. Many come from childhood and from the people around us, so some aren’t really ours.</p>
+          <ul>
+            <li><strong>Pictures light up.</strong> When something in the present matches an old picture, it “lights up,” and we react to the old picture instead of to what’s in front of us.</li>
+            <li><strong>In readings,</strong> what you see in someone’s space often shows up as pictures. Notice them neutrally, and describe them rather than judge them.</li>
+            <li><strong>Matching pictures.</strong> If a reading stirs you up, you may be matching a picture of your own. That’s information about you, not the readee.</li>
+            <li><strong>Letting go of pictures.</strong> You can pull your energy out of a picture that no longer serves you. Some people imagine it dissolving, or send it down the grounding cord. This is sometimes called “blowing” the picture.</li>
+          </ul>
+          <div class="practice"><strong>Practice before next class</strong>Try to ground and run energy for 5–10 minutes a day. Longer is fine too, for example 15–30 minutes. There’s no need to be perfect: if you miss a day, simply start again the next.</div>
+          <p class="ai">I used AI to help write and edit this page.</p>
+        </details>
+        <div class="links"><a href="beginning-psychic-reading-session-1-notes.pdf" target="_blank" rel="noopener">Download printable PDF</a></div>
+      </div></li>
     </ul>
   </section>
 
